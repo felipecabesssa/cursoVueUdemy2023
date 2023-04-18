@@ -7,13 +7,20 @@
 <body>
     
     <div id="app">
+        <p>Exemplo v-on:input</p>
         <p>{{ mensagem }}</p>
         <p>Meu nome é: {{ nome }}</p>
         <input v-on:input="mudarNome">
         <hr>
+        <p>Exemplo Interpolação de strings</p>
         <p>Curso: {{ curso }} | {{ nomeDoInstrutor() }}</p>
         <hr>
+        <p>Exemplo v-bind</p>
         <a v-bind:href="docs">Documentação Vue.Js</a>
+        <hr>
+        <p>Exemplo v-text</p>
+        <p>Instrutor: <span v-text="instrutor"></span></p>
+
     </div>
     
     <script type="text/javascript">
