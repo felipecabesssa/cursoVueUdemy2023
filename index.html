@@ -7,19 +7,31 @@
 <body>
     
     <div id="app">
-        <p>Exemplo v-on:input</p>
+        <h3>Exemplo v-on:input</h3>
         <p>{{ mensagem }}</p>
-        <p>Meu nome é: {{ nome }}</p>
+        <p v-once>Meu nome é: {{ nome }}</p>
         <input v-on:input="mudarNome">
         <hr>
-        <p>Exemplo Interpolação de strings</p>
+        <h3>Exemplo Interpolação de strings</h3>
         <p>Curso: {{ curso }} | {{ nomeDoInstrutor() }}</p>
         <hr>
-        <p>Exemplo v-bind</p>
+        <h3>Exemplo v-bind</h3>
         <a v-bind:href="docs">Documentação Vue.Js</a>
         <hr>
-        <p>Exemplo v-text</p>
+        <h3>Exemplo v-text</h3>
         <p>Instrutor: <span v-text="instrutor"></span></p>
+        <hr>
+        <h3>Diretiva v-once</h3>
+        <p v-once>Nome completo: {{ nome }}</p>
+        <p>Nome: {{ getNome() }}</p>
+        <hr>
+        <h3>Exibindo HTML puro - Diretiva v-html</h3>
+        <p>{{ cursoHtml }}</p>
+        <p v-html="cursoHtml"></p>
+        <hr>
+        <h3>Manipulando eventos</h3>
+        <button v-on:click="incrementar">Clique</button>
+        <p>Botão clicado {{ cliques }} vezes</p>
 
     </div>
     
@@ -29,10 +41,12 @@
             el: '#app',
             data: {
                 mensagem: 'Olá VueJS',
-                nome: '',
+                nome: 'Felipe Henrique Soares de Andrade',
                 curso: 'Vue.Js',
+                cursoHtml: 'Curso de: <span style="color: red">xpto</span>',
                 instrutor: 'Plínio Naves',
-                docs: 'https://vuejs.org'
+                docs: 'https://vuejs.org',
+                cliques: 0
             },
             methods: {
                 mudarNome: function(event) {
@@ -41,6 +55,15 @@
 
                 nomeDoInstrutor: function(){
                   return this.instrutor;
+                },
+
+                getNome: function(){
+                  this.nome = 'Felipe';
+                  return this.nome;
+                },
+
+                incrementar: function(){
+                  this.cliques++;
                 }
             }
         });
