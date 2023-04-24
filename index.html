@@ -51,6 +51,19 @@
       <button type="submit" v-on:click.prevent="onSubmit">Enviar com modificador</button>
     </form>
 
+    <hr>
+    <h3>Eventos do teclado e modificadores de tecla</h3>
+    <input v-on:keyup="onKeyPress" placeholder="Qualquer tecla"><br>
+    <input v-on:keyup.enter="onKeyPress" placeholder="Tecla Enter"><br>
+    <input v-on:keyup.enter.esc="onKeyPress" placeholder="Tecla Enter ou Esc (Escape)"><br>
+    <p>Modificador automático</p>
+    <input v-on:keyup.arrow-up="onKeyPress" placeholder="Tecla seta pra cima">
+    <p>Teclas de sistema - ctrl, alt, comand(mac) etc</p>
+    <input v-on:keyup.ctrl.enter="onKeyPress" placeholder="Teclas CTRL + ENTER">
+     - aqui se pressionar o shift junto ele vai, pra fugir disso usamos o exact abaixo.
+    <p>Exact</p>
+    <input v-on:keyup.ctrl.enter.exact="onKeyPress" placeholder="Teclas CTRL + ENTER (exact)">
+
   </div>
   
   <script type="text/javascript">
@@ -102,6 +115,10 @@
         },
         onSubmit: function(event){
           console.log('Formulário enviado');
+        },
+
+        onKeyPress: function(event){
+          console.log('Tecla ' + event.key + ' pressionada!');
         }
       }
     });
