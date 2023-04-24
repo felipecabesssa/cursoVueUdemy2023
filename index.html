@@ -64,6 +64,13 @@
     <p>Exact</p>
     <input v-on:keyup.ctrl.enter.exact="onKeyPress" placeholder="Teclas CTRL + ENTER (exact)">
 
+    <hr>
+    <h3>Modificando eventos do Mouse</h3>
+    <button v-on:click.left="onMouseClick">Botão esquerdo</button>
+    <button v-on:click.middle="onMouseClick">Botão do meio</button>
+    <button v-on:click.right="onMouseClick">Botão direito</button><br><br>
+    <button v-on:click.right.prevent="onMouseClick">Botão direito sem menu de contexto</button>
+
   </div>
   
   <script type="text/javascript">
@@ -119,6 +126,10 @@
 
         onKeyPress: function(event){
           console.log('Tecla ' + event.key + ' pressionada!');
+        },
+
+        onMouseClick: function(event) {
+          console.log('Botão ' + event.button + ' pressionado!');
         }
       }
     });
