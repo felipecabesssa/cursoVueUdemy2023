@@ -38,6 +38,18 @@
     <h3>Diretiva v-on:blur</h3>
     <input v-on:blur="exibirNome('Meu nome é: ', $event)">
     <p>{{ nomeBlur }}</p>
+    <hr>
+    <h3>Usando modificadores de eventos</h3>
+    <p v-on:click="onClick('p', $event)">
+      Curso de VueJS
+      <button v-on:click.stop="onClick('button', $event)">Clique</button>
+    </p>
+
+    <form>
+      <input type="text">
+      <button type="submit" v-on:click="onSubmit">Enviar sem modificador</button>
+      <button type="submit" v-on:click.prevent="onSubmit">Enviar com modificador</button>
+    </form>
 
   </div>
   
@@ -83,6 +95,13 @@
 
         exibirNome: function(texto, event) {
           this.nomeBlur = texto + event.target.value;
+        },
+
+        onClick: function(elementoAlvo, event){
+          console.log(event.type, ':', elementoAlvo);
+        },
+        onSubmit: function(event){
+          console.log('Formulário enviado');
         }
       }
     });
