@@ -94,6 +94,16 @@
     <p>{{ curso }} => {{ cursoInvertido }}</p>
     <input @keyup.enter="alterarNomeDoCurso">
 
+    <hr>
+    <h3>Computed Properties VS Methods</h3>
+    <p>Nome original: {{ curso }}</p>
+    <p>Nome invertido (computed): {{ cursoInvertidoComputed }}</p>
+    <p>Nome invertido (method): {{ cursoInvertidoMethod() }}</p>
+    <p>Autor: {{ nomeCompletoDoAutor ? 'Plínio Naves' : 'Plínio' }}</p>
+    <button @click="nomeCompletoDoAutor = !nomeCompletoDoAutor">Alterar nome do Autor</button>
+    <br>
+    <input @keyup.enter="alterarNomeDoCurso">
+
   </div>
   
   <script type="text/javascript">
@@ -110,7 +120,8 @@
         cliques: 0,
         x: 0,
         y: 0,
-        nomeBlur: ''
+        nomeBlur: '',
+        nomeCompletoDoAutor: false
       },
       methods: {
         mudarNome: function(event) {
@@ -161,11 +172,21 @@
 
         alterarNomeDoCurso: function(event) {
           this.curso = event.target.value;
+        },
+
+        cursoInvertidoMethod: function() {
+          console.log('Method!');
+          return this.curso.split('').reverse().join('');
         }
       },
 
       computed: {
         cursoInvertido: function() {
+          return this.curso.split('').reverse().join('');
+        },
+
+        cursoInvertidoComputed: function() {
+          console.log('Computed!');
           return this.curso.split('').reverse().join('');
         }
       },
