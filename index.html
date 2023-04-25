@@ -71,6 +71,18 @@
     <button v-on:click.right="onMouseClick">Botão direito</button><br><br>
     <button v-on:click.right.prevent="onMouseClick">Botão direito sem menu de contexto</button>
 
+    <hr>
+    <h3>Atalhos para Property e Event Binding</h3>
+    <p>Sem atalhos</p>
+    <a v-bind:href="docs">Documentação vue</a>
+    <br>
+    <button v-on:click="onClickDocumentacao">Clique</button>
+    <br>
+    <p>Com atalhos</p>
+    <a :href="docs">Documentação vue</a>
+    <br>
+    <button @click="onClickDocumentacao">Clique</button>
+
   </div>
   
   <script type="text/javascript">
@@ -130,6 +142,10 @@
 
         onMouseClick: function(event) {
           console.log('Botão ' + event.button + ' pressionado!');
+        },
+
+        onClickDocumentacao: function(event) {
+          console.log('Evento: ', event.type);
         }
       }
     });
