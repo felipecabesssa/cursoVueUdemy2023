@@ -109,6 +109,12 @@
     <p>Nome: {{ nomeCompleto }}</p>
     <button @click="alterarNomes">Alterar nomes</button>
 
+    <hr>
+    <h3>Quando usar Watchers</h3>
+    <p>Geralmente quando precisamos reagir assincronamente</p>
+    <p>Nome: {{ nomeCompletoWatcher }}</p>
+    <button @click="alterarNome">Alterar nome</button>
+
   </div>
   
   <script type="text/javascript">
@@ -130,6 +136,16 @@
         primeiroNome: 'Felipe',
         ultimoNome: 'Andrade',
         //nomeCompleto: 'Felipe Henrique Soares de Andrade'
+        nomeCompletoWatcher: 'Felipe Alieninjina'
+      },
+
+      watch: {
+        nomeCompletoWatcher: function(novoNomeCompletoWatcher, antigoNomeCompletoWatcher) {
+          var vm = this;
+          setTimeout(function() {
+            vm.nomeCompletoWatcher = 'Nome resetado pelo Watcher!';
+          }, 3000);
+        }
       },
 
       /*watch: {
@@ -146,7 +162,11 @@
         alterarNomes: function(event) {
           this.primeiroNome = 'Alien';
           this.ultimoNome = 'Ninjina'
-        },  
+        }, 
+        
+        alterarNome: function(event) {
+          this.nomeCompletoWatcher = 'ALIENINJINA'
+        },
 
         mudarNome: function(event) {
             this.nome = event.target.value;
