@@ -115,6 +115,11 @@
     <p>Nome: {{ nomeCompletoWatcher }}</p>
     <button @click="alterarNome">Alterar nome</button>
 
+    <hr>
+    <h3>Computed Properties Getter and Setter</h3>
+    <p>Nome: {{ nomeCompletoGetSet }}</p>
+    <input @keyup.enter="alterarNomeGetSet">
+
   </div>
   
   <script type="text/javascript">
@@ -159,6 +164,10 @@
       },*/
 
       methods: {
+        alterarNomeGetSet: function(event) {
+          this.nomeCompletoGetSet = event.target.value;
+        },
+
         alterarNomes: function(event) {
           this.primeiroNome = 'Alien';
           this.ultimoNome = 'Ninjina'
@@ -236,6 +245,17 @@
 
         nomeCompleto: function(){
           return this.primeiroNome + ' ' + this.ultimoNome;
+        },
+
+        nomeCompletoGetSet: {
+          get: function(){
+            return this.primeiroNome + ' ' + this.ultimoNome;
+          },
+          set: function(novoNome) {
+            var nomes = novoNome.split(' ');
+            this.primeiroNome = nomes[0];
+            this.ultimoNome = nomes[nomes.length - 1];
+          }
         }
       },
 
