@@ -104,6 +104,11 @@
     <br>
     <input @keyup.enter="alterarNomeDoCurso">
 
+    <hr>
+    <h3>Computed Properties vs Watchers</h3>
+    <p>Nome: {{ nomeCompleto }}</p>
+    <button @click="alterarNomes">Alterar nomes</button>
+
   </div>
   
   <script type="text/javascript">
@@ -121,9 +126,28 @@
         x: 0,
         y: 0,
         nomeBlur: '',
-        nomeCompletoDoAutor: false
+        nomeCompletoDoAutor: false,
+        primeiroNome: 'Felipe',
+        ultimoNome: 'Andrade',
+        //nomeCompleto: 'Felipe Henrique Soares de Andrade'
       },
+
+      /*watch: {
+        primeiroNome: function(novoPrimeiroNome, antigoPrimeiroNome) {
+          this.nomeCompleto = novoPrimeiroNome + ' ' + this.ultimoNome;
+        },
+
+        ultimoNome: function(novoUltimoNome, antigoUltimoNome) {
+          this.nomeCompleto = this.primeiroNome + ' ' + novoUltimoNome;
+        }
+      },*/
+
       methods: {
+        alterarNomes: function(event) {
+          this.primeiroNome = 'Alien';
+          this.ultimoNome = 'Ninjina'
+        },  
+
         mudarNome: function(event) {
             this.nome = event.target.value;
         },
@@ -188,6 +212,10 @@
         cursoInvertidoComputed: function() {
           console.log('Computed!');
           return this.curso.split('').reverse().join('');
+        },
+
+        nomeCompleto: function(){
+          return this.primeiroNome + ' ' + this.ultimoNome;
         }
       },
 
