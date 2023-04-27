@@ -126,6 +126,16 @@
     <input v-model="nomeDataBinding">
     <p>Nome: {{ nomeDataBinding }}</p>
 
+    <hr>
+    <h3>Estilização dinamica com CSS</h3>
+    <div id="app">
+      <div 
+        class="caixa"
+        :class="{ coral : aplicarClasse }"
+        @click="aplicarClasse = !aplicarClasse">
+      </div>
+    </div>
+
   </div>
   
   <script type="text/javascript">
@@ -148,7 +158,8 @@
         primeiroNome: 'Felipe',
         ultimoNome: 'Andrade',
         //nomeCompleto: 'Felipe Henrique Soares de Andrade'
-        nomeCompletoWatcher: 'Felipe Alieninjina'
+        nomeCompletoWatcher: 'Felipe Alieninjina',
+        aplicarClasse: false
       },
 
       watch: {
@@ -276,6 +287,18 @@
       font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
       color: rgb(210, 245, 245);
       padding-bottom: 100px;
+    }
+
+    .caixa {
+      width: 200px;
+      height: 200px;
+      display: inline-block;
+      margin-right: 10px;
+      background-color: gray;
+    }
+
+    .coral {
+      background-color: lightcoral;
     }
   </style>
     
