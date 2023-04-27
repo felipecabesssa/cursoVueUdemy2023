@@ -120,6 +120,12 @@
     <p>Nome: {{ nomeCompletoGetSet }}</p>
     <input @keyup.enter="alterarNomeGetSet">
 
+    <hr>
+    <h3>Two way Data Binding com v-model</h3>
+    <input :value="nomeDataBinding" @input="nomeDataBinding = $event.target.value">
+    <input v-model="nomeDataBinding">
+    <p>Nome: {{ nomeDataBinding }}</p>
+
   </div>
   
   <script type="text/javascript">
@@ -129,6 +135,7 @@
       data: {
         mensagem: 'Olá VueJS',
         nome: 'Felipe Henrique Soares de Andrade',
+        nomeDataBinding: 'Ninja',
         curso: 'Vue.Js',
         cursoHtml: 'Curso de: <span style="color: red">xpto</span>',
         instrutor: 'Plínio Naves',
