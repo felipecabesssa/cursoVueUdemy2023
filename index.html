@@ -136,6 +136,23 @@
       </div>
     </div>
 
+    <hr>
+    <h3>Estilização dinamica com CSS - Usando Nomes</h3>
+    <div id="app">
+      <div 
+        class="caixa"
+        :class="{ coral : aplicarClasse }"
+        @click="aplicarClasse = !aplicarClasse">
+      </div>
+
+      <div 
+        class="caixa"
+        :class="nomeDaClasse">
+
+      </div>
+      <input v-model="nomeDaClasse" placeholder="Nome da classe CSS">
+    </div>
+
   </div>
   
   <script type="text/javascript">
@@ -159,7 +176,8 @@
         ultimoNome: 'Andrade',
         //nomeCompleto: 'Felipe Henrique Soares de Andrade'
         nomeCompletoWatcher: 'Felipe Alieninjina',
-        aplicarClasse: false
+        aplicarClasse: false,
+        nomeDaClasse: ''
       },
 
       watch: {
@@ -299,6 +317,18 @@
 
     .coral {
       background-color: lightcoral;
+    }
+
+    .verde {
+      background-color: lightgreen;
+    }
+
+    .azul {
+      background-color: lightblue;
+    }
+
+    .circulo {
+      border-radius: 100%;
     }
   </style>
     
