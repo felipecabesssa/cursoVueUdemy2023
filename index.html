@@ -135,6 +135,7 @@
         @click="aplicarClasse = !aplicarClasse">
       </div>
     </div>
+    <p>Ao clicar na caixa ela muda de cor</p>
 
     <hr>
     <h3>Estilização dinamica com CSS - Usando Nomes</h3>
@@ -151,6 +152,7 @@
 
       </div>
       <input v-model="nomeDaClasse" placeholder="Nome da classe CSS">
+      <p>Digite algum nome (azul, coral, verde ou circulo) no input e observe o comportamento da caixa</p>
     </div>
 
     <hr>
@@ -159,6 +161,13 @@
       class="caixa"
       :class="classesCSS"
       @click="aplicarClasse = !aplicarClasse">
+    </div>
+
+    <hr>
+    <h3>Estilização de classe usando Arrays</h3>
+    <div 
+      class="caixa"
+      :class="[ 'circulo', nomeDaClasse, { verde: aplicarClasse } ]">
     </div>
 
   </div>
