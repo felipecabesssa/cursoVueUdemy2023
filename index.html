@@ -153,6 +153,14 @@
       <input v-model="nomeDaClasse" placeholder="Nome da classe CSS">
     </div>
 
+    <hr>
+    <h3>Estilização dinâmica com classe usando objeto</h3>
+    <div 
+      class="caixa"
+      :class="classesCSS"
+      @click="aplicarClasse = !aplicarClasse">
+    </div>
+
   </div>
   
   <script type="text/javascript">
@@ -281,6 +289,14 @@
 
         nomeCompleto: function(){
           return this.primeiroNome + ' ' + this.ultimoNome;
+        },
+
+        classesCSS: function() {
+          return {
+            azul: this.aplicarClasse,
+            circulo: this.aplicarClasse,
+            verde: !this.aplicarClasse
+          }
         },
 
         nomeCompletoGetSet: {
