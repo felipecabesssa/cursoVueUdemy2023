@@ -172,8 +172,15 @@
 
     <hr>
     <h3>Estilizando propriedades dinâmicamente com Style</h3>
-    <div>
-      
+    <div id="app">
+      <div 
+        style="width: 200px; height: 200px;"
+        :style="{ backgroundColor: corStyle, height: tamanho + 'px' }">
+      </div>
+      <div :style="estilosCSS"></div>
+      <div :style="[ estilosCSS, { border: '2px solid black', 'background-color': 'blue' } ]"></div>
+      <input v-model="corStyle" placeholder="cor">
+      <input v-model="tamanho" placeholder="Tamanho em px">
     </div>
 
   </div>
@@ -200,7 +207,9 @@
         //nomeCompleto: 'Felipe Henrique Soares de Andrade'
         nomeCompletoWatcher: 'Felipe Alieninjina',
         aplicarClasse: false,
-        nomeDaClasse: ''
+        nomeDaClasse: '',
+        corStyle: '',
+        tamanho: 20
       },
 
       watch: {
@@ -322,6 +331,14 @@
             var nomes = novoNome.split(' ');
             this.primeiroNome = nomes[0];
             this.ultimoNome = nomes[nomes.length - 1];
+          }
+        },
+
+        estilosCSS: function() {
+          return {
+            backgroundColor: this.corStyle,
+            height: (this.tamanho + 10) + 'px',
+            width: '100px'
           }
         }
       },
