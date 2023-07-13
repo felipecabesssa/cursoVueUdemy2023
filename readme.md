@@ -10,3 +10,4 @@
 - 38 - Trabalhando com v-else-if
 - 39 - Renderizando grupos de elementos condicionalmente (template + v-if)
 - 40 - Controlando reutilização de elementos com key
+- 41 - Ocultando elementos com v-show
