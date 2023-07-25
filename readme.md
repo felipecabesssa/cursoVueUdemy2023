@@ -12,3 +12,4 @@
 - 40 - Controlando reutilização de elementos com key
 - 41 - Ocultando elementos com v-show
 - 42 - Diferenças entre v-ilf e v-show
+- 43 - Renderizando listas com o v-for
