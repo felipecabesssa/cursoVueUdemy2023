@@ -11,3 +11,4 @@
 - 39 - Renderizando grupos de elementos condicionalmente (template + v-if)
 - 40 - Controlando reutilização de elementos com key
 - 41 - Ocultando elementos com v-show
+- 42 - Diferenças entre v-ilf e v-show
