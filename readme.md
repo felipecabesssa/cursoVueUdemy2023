@@ -1,5 +1,3 @@
-# Titulos Aulas
-
 # Módulo 1 e 2 
 
 - Aulas 1 a 35
@@ -13,3 +11,4 @@
 - 41 - Ocultando elementos com v-show
 - 42 - Diferenças entre v-ilf e v-show
 - 43 - Renderizando listas com o v-for
+- 44 - Acessando o índice do item iterado no v-for
