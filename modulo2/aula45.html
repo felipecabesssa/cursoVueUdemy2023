@@ -1,0 +1,65 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Modulo2</title>
+  <script type="text/javascript" src="https://unpkg.com/vue"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+</head>
+<body>
+
+  <div id="app">
+    <h1>Produtos - Objetos</h1>
+
+    <h3>Acessando o valor</h3>
+    <ul>
+      <li v-for="valor in produto">{{ valor }}</li>
+    </ul>
+
+    <h3>Acessando o valor e a chave</h3>
+    <p>A ordem dentro do for quando trabalhamos com <strong>objetos</strong> influencia: 
+      priemira variavel é o valor, a segunda é a chave e a terceira o indice</p>
+    
+    <ul>
+      <li v-for="(valor, chave) in produto">{{ chave }}: {{ valor }}</li>
+    </ul>
+
+    <h3>Acessando o valor, chave e o indice</h3>
+    <ul>
+      <li v-for="(valor, chave, indice) in produto">{{ indice }} - {{ chave }}: {{ valor }}</li>
+    </ul>
+
+    <h2>Obs Arrays</h2>
+    <p>No caso de <strong>Arrays</strong>, temos Valor e Indice</p>
+  </div>
+  
+  <script type="text/javascript">
+
+    new Vue({
+        el: '#app',
+        data: {
+         produto: {
+          id: 1,
+          nome: 'Teclado',
+          marca: 'Dell',
+          custo: 100
+         }
+        }
+    });
+
+</script>
+
+
+<style>
+    body {
+      background-color: rgb(35, 35, 35);
+      font-family: system-ui, Roboto, Oxygen, Ubuntu;
+      color: rgb(210, 245, 245);
+      padding-bottom: 100px;
+    }
+
+    
+  </style>
+
+</body>
+</html>
