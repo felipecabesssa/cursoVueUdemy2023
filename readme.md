@@ -14,3 +14,4 @@
 - 44 - Acessando o índice do item iterado no v-for
 - 45 - Iterando objetos com o v-for
 - 46 - Iterando intervalos numéricos
+- 47 - Rastreando identidade dos elementos no v-for com key
