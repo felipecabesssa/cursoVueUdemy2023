@@ -15,3 +15,4 @@
 - 45 - Iterando objetos com o v-for
 - 46 - Iterando intervalos numéricos
 - 47 - Rastreando identidade dos elementos no v-for com key
+- 48 - Agrupando elementos com template
