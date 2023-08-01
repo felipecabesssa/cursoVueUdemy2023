@@ -17,3 +17,4 @@
 - 47 - Rastreando identidade dos elementos no v-for com key
 - 48 - Agrupando elementos com template
 - 49 - v-for junto com v-if e filtragem de arrays
+- 50 - Detectando mudança e arrays
