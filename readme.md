@@ -19,3 +19,7 @@
 - 49 - v-for junto com v-if e filtragem de arrays
 - 50 - Detectando mudança e arrays
 - 51 - Detectando mudanças em objetos
+
+# Módulo 4
+
+- 55 - conceitos básicos sobre a instância Vue
