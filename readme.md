@@ -22,4 +22,5 @@
 
 # Módulo 4
 
-- 55 - conceitos básicos sobre a instância Vue
+- 55 - Conceitos básicos sobre a instância Vue
+- 56 - Trabalhando com múltiplas instâncias
