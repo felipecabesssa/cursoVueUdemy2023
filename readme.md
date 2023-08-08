@@ -24,3 +24,4 @@
 
 - 55 - Conceitos básicos sobre a instância Vue
 - 56 - Trabalhando com múltiplas instâncias
+- 57 - Acessando propriedades de outras instâncias
