@@ -26,3 +26,4 @@
 - 56 - Trabalhando com múltiplas instâncias
 - 57 - Acessando propriedades de outras instâncias
 - 58 - Como o Vue gerencia os dados e métodos
+- 59 - Vue é simplesmente JavaScript
