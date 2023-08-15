@@ -28,3 +28,4 @@
 - 58 - Como o Vue gerencia os dados e métodos
 - 59 - Vue é simplesmente JavaScript
 - 60 - Usando $refs
+- 61 - Montando templates
