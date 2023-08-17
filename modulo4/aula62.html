@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <title>VueJS - Guia completo</title>
+    <script type="text/javascript" src="https://unpkg.com/vue"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+</head>
+<body>
+
+    <div id="app">
+      <h2>Instância 01</h2>
+      <meu-component></meu-component>
+      <meu-component></meu-component>
+    </div>
+
+    <div id="app2"></div>
+
+    <script type="text/javascript">
+
+      Vue.component('meu-component', {
+        template: '<h3>Meu primeiro component Vue</h3>'
+      })
+    
+      var vm1 = new Vue({
+        el: '#app'
+      });
+
+      var vm2 = new Vue({
+        el: '#app2',
+        template: '<div><h2>Instância 02</h2><meu-component></meu-component></div>'
+      });
+
+    </script>
+
+    <style>
+      body {
+        background-color: rgb(35, 35, 35);
+        font-family: system-ui, -apple-system Ubuntu;
+        color: rgb(210, 245, 245);
+        padding-bottom: 100px;
+      }
+    </style>
+    
+</body>
+</html>

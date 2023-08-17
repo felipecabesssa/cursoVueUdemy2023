@@ -29,3 +29,4 @@
 - 59 - Vue é simplesmente JavaScript
 - 60 - Usando $refs
 - 61 - Montando templates
+- 62 - Usando components
