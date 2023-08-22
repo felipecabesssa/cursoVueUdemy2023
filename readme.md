@@ -1,3 +1,7 @@
+# Link curso na Udemy
+
+https://www.udemy.com/course/vue-js-guia-completo/
+
 # Módulo 1 e 2 
 
 - Aulas 1 a 35
@@ -30,3 +34,7 @@
 - 60 - Usando $refs
 - 61 - Montando templates
 - 62 - Usando components
+- 63 - Teoria - Limitações em templates
+- 64 - Teoria - VueJS e virtual DOM
+- 65 - Teoria - LifecycleHooks, ciclo de vida de uma instância Vue
+- 66 - LifecycleHooks na prática - removendo warnings de deployment do log
