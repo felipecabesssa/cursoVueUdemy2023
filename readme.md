@@ -38,3 +38,7 @@ https://www.udemy.com/course/vue-js-guia-completo/
 - 64 - Teoria - VueJS e virtual DOM
 - 65 - Teoria - LifecycleHooks, ciclo de vida de uma instância Vue
 - 66 - LifecycleHooks na prática - removendo warnings de deployment do log
+
+# Módulo 5
+
+- Instalação do vue cli - npm install -g @vue/cli - e criação do 1º projeto hello world
