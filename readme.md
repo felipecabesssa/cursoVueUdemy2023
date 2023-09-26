@@ -42,3 +42,7 @@ https://www.udemy.com/course/vue-js-guia-completo/
 # Módulo 5
 
 - Instalação do vue cli - npm install -g @vue/cli - e criação do 1º projeto hello world
+
+# Módulo 6 - Components
+
+- Novo projeto com Vue cli - aula 89
