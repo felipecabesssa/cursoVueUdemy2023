@@ -41,6 +41,8 @@ https://www.udemy.com/course/vue-js-guia-completo/
 
 # Módulo 5
 
+- teste - mudança 10-10
+
 - Instalação do vue cli - npm install -g @vue/cli - e criação do 1º projeto hello world
 
 # Módulo 6 - Components
