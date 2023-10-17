@@ -48,3 +48,4 @@ https://www.udemy.com/course/vue-js-guia-completo/
 # Módulo 6 - Components
 
 - Novo projeto com Vue cli - aula 89
+- 92 - Registrando components globalmente e localmente
