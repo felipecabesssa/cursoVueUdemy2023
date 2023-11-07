@@ -54,3 +54,4 @@ https://www.udemy.com/course/vue-js-guia-completo/
 # Módulo 7 - Props e Events - Comunicação entre components
 
 - Projeto final do professor
+- Projeto final sem pasta git no projeto
