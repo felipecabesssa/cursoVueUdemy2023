@@ -58,3 +58,4 @@ https://www.udemy.com/course/vue-js-guia-completo/
 - Projeto meu inicio módulo
 - Correção babel eslint
 - 104 - Passando dados para props dinamicamente
+- 105 - Usando props dentro da instancia do Component
