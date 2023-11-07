@@ -50,3 +50,7 @@ https://www.udemy.com/course/vue-js-guia-completo/
 - Novo projeto com Vue cli - aula 89
 - 92 - Registrando components globalmente e localmente
 - Projeto professor do mód 6 - vue components introdução
+
+# Módulo 7 - Props e Events - Comunicação entre components
+
+- Projeto final do professor
