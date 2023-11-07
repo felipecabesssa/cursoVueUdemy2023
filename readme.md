@@ -55,3 +55,5 @@ https://www.udemy.com/course/vue-js-guia-completo/
 
 - Projeto final do professor
 - Projeto final sem pasta git no projeto
+- Projeto meu inicio módulo
+- Correção babel eslint
