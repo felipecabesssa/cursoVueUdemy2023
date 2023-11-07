@@ -61,3 +61,4 @@ https://www.udemy.com/course/vue-js-guia-completo/
 - 105 - Usando props dentro da instancia do Component
 - 108 - Tipagem em props - filmeTitulo = String
 - 109 - Validando props - required, default, validator
+- 110 - Passando objeto inteiro via props com o v-bind
