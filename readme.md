@@ -59,3 +59,4 @@ https://www.udemy.com/course/vue-js-guia-completo/
 - Correção babel eslint
 - 104 - Passando dados para props dinamicamente
 - 105 - Usando props dentro da instancia do Component
+- 108 - Tipagem em props - filmeTitulo = String

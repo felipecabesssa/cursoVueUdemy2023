@@ -6,7 +6,7 @@
 
       <h2>Filmes</h2>
 
-      <div class="list-group list-group-flush">
+      <ul class="list-group list-group-flush">
 
         <FilmesListaIten 
           v-for="(filme, index) in filmes"
@@ -14,7 +14,7 @@
           :filmeTitulo="filme"
         />
 
-      </div>
+      </ul>
     </div>
 
     <!-- coluna 2 -->
