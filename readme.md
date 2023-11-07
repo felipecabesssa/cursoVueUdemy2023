@@ -51,9 +51,10 @@ https://www.udemy.com/course/vue-js-guia-completo/
 - 92 - Registrando components globalmente e localmente
 - Projeto professor do mód 6 - vue components introdução
 
-# Módulo 7 - Props e Events - Comunicação entre components
+# Módulo 7 - Props e Events
 
 - Projeto final do professor
 - Projeto final sem pasta git no projeto
 - Projeto meu inicio módulo
 - Correção babel eslint
+- 104 - Passando dados para props dinamicamente
